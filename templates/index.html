@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>modéle de la prédiction des crédits</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>La prédiction des demandes des crédits</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Credit_History" placeholder="Est que le client déja pris un crédit" required="required" />
+        <input type="text" name="Married" placeholder="Est ce que le client est marrié" required="required" />
+
+		<input type="text" name="Income" placeholder="Les revenus du client" required="required" />
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Prédire</button>
+    </form>
+
+   <br>
+   <br>
+   <h3>{{ prediction_text }}</h3>
+
+ </div>
+
+
+</body>
+</html>
