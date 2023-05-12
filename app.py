@@ -20,7 +20,7 @@ def predict():
 
     output = round(prediction[0], 2)
 
-    return render_template('index.html', prediction_text='La réponse de votre requéte est:  {}'.format(output))
+    return render_template('index.html', prediction_text='Your claimant’s answer is:  {}'.format(output))
 
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
