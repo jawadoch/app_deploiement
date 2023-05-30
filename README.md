@@ -27,7 +27,7 @@ By default, flask will run on port 5000.
 3. Navigate to URL http://localhost:5000
 
 
-![You should be able to view the homepage as below :](Result.jpg)
+![You should be able to view the homepage as below :](Result.png)
  
 Enter valid numerical values in all 3 input boxes and hit Predict.
 
